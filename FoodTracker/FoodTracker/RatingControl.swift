@@ -56,12 +56,12 @@ class RatingControl: UIView {
         updateButtonSelectionStates()
     }
     
-//    override func intrinsicContentSize() -> CGSize {
-//        let buttonSize = Int(frame.size.height)
-//        let width = (buttonSize * starCount) + (spacing * (starCount - 1))
-//        
-//        return CGSize(width: width, height: buttonSize)
-//    }
+    override var intrinsicContentSize : CGSize {
+        let buttonSize = Int(frame.size.height)
+        let width = (buttonSize + spacing) * starCount
+        
+        return CGSize(width: width, height: buttonSize)
+    }
     
 
     // MARK: Button Action
